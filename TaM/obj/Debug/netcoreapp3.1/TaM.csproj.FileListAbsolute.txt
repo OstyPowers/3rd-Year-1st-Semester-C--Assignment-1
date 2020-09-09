@@ -1,0 +1,39 @@
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.exe
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.deps.json
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.json
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.dev.json
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.dll
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csprojAssemblyReference.cache
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfoInputs.cache
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfo.cs
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csproj.CoreCompileInputs.cache
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.dll
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\Matt Osty\Desktop\Course Stuff\C#\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.genruntimeconfig.cache
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csprojAssemblyReference.cache
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfoInputs.cache
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfo.cs
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csproj.CoreCompileInputs.cache
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.dll
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.exe
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.deps.json
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.json
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.dev.json
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.dll
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\Matt Osty\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.genruntimeconfig.cache
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csprojAssemblyReference.cache
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfoInputs.cache
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.AssemblyInfo.cs
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.csproj.CoreCompileInputs.cache
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.dll
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.exe
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.deps.json
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.json
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.runtimeconfig.dev.json
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.dll
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\bin\Debug\netcoreapp3.1\TaM.pdb
+C:\Users\matto\OneDrive - Ara Institute of Canterbury\C#\Assignment 2\TaM\TaM\obj\Debug\netcoreapp3.1\TaM.genruntimeconfig.cache
