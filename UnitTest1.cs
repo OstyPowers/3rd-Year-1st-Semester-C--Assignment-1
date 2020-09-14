@@ -267,7 +267,7 @@ namespace TaMTests
             bool actuallyHas = targetSquare.Left;
             Assert.AreEqual(expected, actuallyHas);
         }
-        /*
+        
         void MakeSimpleGame()
         {
             game = new Game();
@@ -422,6 +422,372 @@ namespace TaMTests
             bool expected = true;
             bool actuallyHas = targetSquare.Bottom;
             Assert.AreEqual(expected, actuallyHas);
-        }*/
+        }
+        /*
+        void MakeTheseus3By3Game()
+        {
+            game = new Game();
+            game.AddLevel("ThesesusIn3by3", 3, 3,
+            "0000 0101 0202"
+            + " 1111 1001 1100"
+            + " 1001 0000 0100"
+            + " 0011 0010 0110");
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusExits0101To0001WhenMovingUP()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.UP);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(0, 1);
+            bool[] expectedPresence = { false, true };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusExits0101To0201WhenMovingDOWN()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.DOWN);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(2, 1);
+            bool[] expectedPresence = { false, true };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusExits0101To0102WhenMovingRIGHT()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.RIGHT);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(1, 2);
+            bool[] expectedPresence = { false, true };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusExits0101To0102WhenMovingLEFT()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.LEFT);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(1, 0);
+            bool[] expectedPresence = { false, true };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusIn0101StaysIn0101WhenPausing()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.PAUSE);
+            Square destination = game.WhatIsAt(1, 1);
+            bool expectedPresence = true;
+            bool actualPresence = destination.Theseus;
+            Assert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusMovingSuccessfullyIncrementsMoveCount()
+        {
+            MakeTheseus3By3Game();
+            game.MoveTheseus(Moves.LEFT);
+            game.MoveTheseus(Moves.DOWN);
+            game.MoveTheseus(Moves.RIGHT);
+            game.MoveTheseus(Moves.UP);
+            game.MoveTheseus(Moves.PAUSE);
+            int expectedMoveCount = 5;
+            int actualMoveCount = game.MoveCount;
+            Assert.AreEqual(expectedMoveCount, actualMoveCount);
+        }
+        void MakeBlockedTheseusIn3By3()
+        {
+            game = new Game();
+            game.AddLevel("JailedThesesusIn3by3", 3, 3,
+            "0000 0101 0202"
+            + " 1111 1001 1100"
+            + " 1101 1111 0101"
+            + " 0011 1010 0110");
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void BlockedTheseusStaysAt0101WhenMovingUP()
+        {
+            MakeBlockedTheseusIn3By3();
+            game.MoveTheseus(Moves.UP);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(0, 1);
+            bool[] expectedPresence = { true, false };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void BlockedTheseusStaysAt0101WhenMovingDOWN()
+        {
+            MakeBlockedTheseusIn3By3();
+            game.MoveTheseus(Moves.DOWN);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(2, 1);
+            bool[] expectedPresence = { true, false };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void BlockedTheseusStaysAt0101MovingRIGHT()
+        {
+            MakeBlockedTheseusIn3By3();
+            game.MoveTheseus(Moves.RIGHT);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(1, 2);
+            bool[] expectedPresence = { true, false };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void BlockedTheseusStaysAt0101MovingLEFT()
+        {
+            MakeBlockedTheseusIn3By3();
+            game.MoveTheseus(Moves.LEFT);
+            Square origin = game.WhatIsAt(1, 1);
+            Square destination = game.WhatIsAt(1, 0);
+            bool[] expectedPresence = { true, false };
+            bool[] actualPresence = { origin.Theseus, destination.Theseus };
+            CollectionAssert.AreEqual(expectedPresence, actualPresence);
+        }
+        [TestMethod, TestCategory("TheseusMoving")]
+        public void TheseusMovingUnuccessfullyLeavesMovesCountUnaltered()
+        {
+            MakeBlockedTheseusIn3By3();
+            game.MoveTheseus(Moves.LEFT);
+            game.MoveTheseus(Moves.DOWN);
+            game.MoveTheseus(Moves.RIGHT);
+            game.MoveTheseus(Moves.UP);
+            int expectedMoveCount = 0;
+            int actualMoveCount = game.MoveCount;
+            Assert.AreEqual(expectedMoveCount, actualMoveCount);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesUPWhenTheseusIsDirectlyAbove()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTwoAboveIn7by7", 7, 7,
+                "0303 0003 0001"
+                + " 1001 1000 1000 1000 1000 1000 1100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,
+            expectedMinotaurAtDestination };
+            bool actualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(1, 3).Minotaur;
+            bool[] actual = { actualMinotaurAtOrigin,
+            actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesDOWNWhenTheseusIsDirectlyBelow()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTwoBelowIn7by7", 7, 7,
+            "0303 0603 0001"
+                + " 1001 1000 1000 1000 1000 1000 1100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0001 0000 0000 0000 0000 0000 0100"
+                + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool acutualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(5, 3).Minotaur;
+            bool[] actual = { acutualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesRIGHTWhenTheseusIsDirectlyRIGHT()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTwoRightIn7by7", 7, 7,
+            "0303 0306 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool actualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 5).Minotaur;
+            bool[] actual = { actualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesLEFTWhenTheseusIsDirectlyLEFT()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTwoLEFTIn7by7", 7, 7,
+            "0303 0300 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,
+expectedMinotaurAtDestination };
+            bool actualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 1).Minotaur;
+            bool[] actual = { actualMinotaurAtOrigin,
+actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesRIGHTWhenTheseusIsRIGHTAndUP()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTopRightIn7by7", 7, 7,
+            "0303 0006 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool actualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 5).Minotaur;
+            bool[] actual = { actualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesLEFTWhenTheseusIsLEFTAndUP()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusTopLeftIn7by7", 7, 7,
+            "0303 0000 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool acutualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 1).Minotaur;
+            bool[] actual = { acutualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesLEFTWhenTheseusIsLEFTAndDOWN()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusBottomLeftIn7by7", 7, 7,
+            "0303 0600 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool acutualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 1).Minotaur;
+            bool[] actual = { acutualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("MinotaurMoving")]
+        public void MinotaurMovesRIGHTWhenTheseusIsRIGHTAndDOWN()
+        {
+            game = new Game();
+            game.AddLevel("CentredMinotaurWithThesesusBottomLeftIn7by7", 7, 7,
+            "0303 0606 0001"
+            + " 1001 1000 1000 1000 1000 1000 1100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0001 0000 0000 0000 0000 0000 0100"
+            + " 0011 0010 0010 0010 0010 0010 0110");
+            game.MoveMinotaur();
+            game.MoveMinotaur();
+            bool expectedMinotaurAtOrigin = false;
+            bool expectedMinotaurAtDestination = true;
+            bool[] expected = { expectedMinotaurAtOrigin,expectedMinotaurAtDestination };
+            bool acutualMinotaurAtOrigin = game.WhatIsAt(3, 3).Minotaur;
+            bool actualMinotaurAtDestination = game.WhatIsAt(3, 5).Minotaur;
+            bool[] actual = { acutualMinotaurAtOrigin,actualMinotaurAtDestination };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod, TestCategory("Winning")]
+        public void MinotaurWinsIfOnTheseus()
+        {
+            game = new Game();
+            game.AddLevel("level 1", 3, 1, "0000 0000 0002 1011 1010 1110");
+            bool expectedWin = true;
+            bool actualWin = game.HasMinotaurWon;
+            Assert.AreEqual(expectedWin, actualWin);
+        }
+        [TestMethod, TestCategory("Winning")]
+        public void MinotaurNotWonIfNotOnTheseus()
+        {
+            game = new Game();
+            game.AddLevel("level 1", 3, 1, "0000 0001 0002 1011 1010 1110");
+            bool expectedWin = false;
+            bool actualWin = game.HasMinotaurWon;
+            Assert.AreEqual(expectedWin, actualWin);
+        }
+        [TestMethod, TestCategory("Winning")]
+        public void TheseusWinsIfOnExit()
+        {
+            game = new Game();
+            game.AddLevel("level 1", 3, 1, "0000 0002 0002 1011 1010 1110");
+            bool expectedWin = true;
+            bool actualWin = game.HasTheseusWon;
+            Assert.AreEqual(expectedWin, actualWin);
+        }
+        [TestMethod, TestCategory("Winning")]
+        public void TheseusNotWonIfNotOnExit()
+        {
+            game = new Game();
+            game.AddLevel("level 1", 3, 1, "0000 0001 0002 1011 1010 1110");
+            bool expectedWin = false;
+            bool actualWin = game.HasTheseusWon;
+            Assert.AreEqual(expectedWin, actualWin);
+        } */
     }
 }
