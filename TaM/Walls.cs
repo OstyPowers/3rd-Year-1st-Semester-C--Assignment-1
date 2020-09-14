@@ -7,10 +7,10 @@ namespace TaM
     [Flags]
     enum Walls
     {
-        Top,
-        Left,
-        Bottom,
-        Right,
+        Top = 1,
+        Left = 2,
+        Bottom =3,
+        Right = 4,
     }
 
 }

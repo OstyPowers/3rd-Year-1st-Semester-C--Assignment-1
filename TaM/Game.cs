@@ -41,7 +41,7 @@ namespace TaM
 		
 		public Square WhatIsAt(int x, int y)
         {
-			Square square = new Square("");
+			Square square = this.CurrentLevel.allMySquares[x, y];
 			return square;
 
         }
