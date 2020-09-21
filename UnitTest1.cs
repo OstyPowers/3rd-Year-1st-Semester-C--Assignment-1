@@ -423,7 +423,7 @@ namespace TaMTests
             bool actuallyHas = targetSquare.Bottom;
             Assert.AreEqual(expected, actuallyHas);
         }
-        /*
+        
         void MakeTheseus3By3Game()
         {
             game = new Game();
@@ -476,7 +476,7 @@ namespace TaMTests
             bool[] expectedPresence = { false, true };
             bool[] actualPresence = { origin.Theseus, destination.Theseus };
             CollectionAssert.AreEqual(expectedPresence, actualPresence);
-        }
+        }/*
         [TestMethod, TestCategory("TheseusMoving")]
         public void TheseusIn0101StaysIn0101WhenPausing()
         {
@@ -499,7 +499,7 @@ namespace TaMTests
             int expectedMoveCount = 5;
             int actualMoveCount = game.MoveCount;
             Assert.AreEqual(expectedMoveCount, actualMoveCount);
-        }
+        }*/
         void MakeBlockedTheseusIn3By3()
         {
             game = new Game();
@@ -564,7 +564,7 @@ namespace TaMTests
             int expectedMoveCount = 0;
             int actualMoveCount = game.MoveCount;
             Assert.AreEqual(expectedMoveCount, actualMoveCount);
-        }
+        }/*
         [TestMethod, TestCategory("MinotaurMoving")]
         public void MinotaurMovesUPWhenTheseusIsDirectlyAbove()
         {
