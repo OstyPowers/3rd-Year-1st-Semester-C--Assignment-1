@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace TaM
@@ -13,6 +14,7 @@ namespace TaM
 		public int LevelCount { get; set; }
 		private List<string> LevNames;
 		private Level CurrentLevel;
+		public int MoveCount;
 
         public Game()
 		{
@@ -21,6 +23,7 @@ namespace TaM
 			this.CurrentLevelName = "No levels loaded";
 			this.LevelCount = 0; 
 			this.LevNames = new List<string>();
+			this.MoveCount = 0;
 		}
 		public List<string> LevelNames()
 		{
@@ -58,8 +61,67 @@ namespace TaM
 				}
             }
         }
-		 
-		
+
+        public void MoveTheseus(Moves move)
+        {
+			//where is theseus  
+			int[] theseus = CurrentLevel.GetTheseus();
+			//what is the new square theseus is moving to
+			//get current x y of theseus 
+			//depending on direction plus or minus from the x y values
+			int x = theseus[1];
+			int y = theseus[0];
+			bool canMove = false;
+			Square origin = WhatIsAt(x, y);
+			//can theseus move to that square
+			//if wall is blocking theseus cannot move
+			//else move theseus
+			switch (move) 
+			{
+				case Moves.UP:
+					if (!origin.Top)
+					{
+						y -= 1;
+						canMove = true;
+					}
+					break;
+				case Moves.DOWN:
+					if (!origin.Bottom)
+					{
+						y += 1;
+						canMove = true;
+					}
+					break;
+				case Moves.LEFT:
+					if (!origin.Left)
+					{
+						x -= 1;
+						canMove = true;
+					}
+					break;
+				case Moves.RIGHT:
+					if (!origin.Right)
+					{
+						x += 1;
+						canMove = true;
+					}
+					break;
+			
+            }
+			//use what is at method to select new square for theseus 
+			//add one to move count 
+			if (canMove)
+            {
+				Square destination = WhatIsAt(y, x);
+				CurrentLevel.theseus = new int[] { y, x };
+				origin.Theseus = false;
+				destination.Theseus = true;
+				this.MoveCount++;
+			}
+
+		}
+
+
 
 	}
 
