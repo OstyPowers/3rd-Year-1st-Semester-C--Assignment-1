@@ -9,7 +9,8 @@ namespace TaM
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
+        PAUSE
     }
 
 }

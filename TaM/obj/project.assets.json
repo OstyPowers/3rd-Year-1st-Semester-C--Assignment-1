@@ -8,20 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Matt Osty\\.nuget\\packages\\": {}
+    "C:\\Users\\matto\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matt Osty\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\TaM.csproj",
+      "projectUniqueName": "C:\\Users\\matto\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\TaM.csproj",
       "projectName": "TaM",
-      "projectPath": "C:\\Users\\Matt Osty\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\TaM.csproj",
-      "packagesPath": "C:\\Users\\Matt Osty\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matt Osty\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\obj\\",
+      "projectPath": "C:\\Users\\matto\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\TaM.csproj",
+      "packagesPath": "C:\\Users\\matto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matto\\OneDrive - Ara Institute of Canterbury\\C#\\Assignment 2\\TaM\\TaM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Matt Osty\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\matto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -58,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
